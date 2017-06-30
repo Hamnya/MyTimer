@@ -12,6 +12,7 @@ import java.util.TimerTask;
 
 /**
  * 1초마다 텍스트를 갱신하는 타이머예제
+ * change textview every 1 sec using timer
  * 출처: http://egloos.zum.com/hiiq/v/1845943
  */
 public class MainActivity extends AppCompatActivity {
