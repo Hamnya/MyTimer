@@ -20,16 +20,25 @@ public class MainActivity extends AppCompatActivity {
     private TextView timerText;
     private final Handler handler =  new Handler();
     private int timer_sec = 0;
-    private Button btn;
+    private Button btn, btn2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn = (Button)findViewById(R.id.button);
+        btn2 = (Button)findViewById(R.id.button2);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 testStart();
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             if(sec != null)
+                     sec.cancel();
             }
         });
 
@@ -50,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         Timer timer = new Timer();
         timer.schedule(sec, 0, 1000);
+
     }
 
 
